@@ -1,0 +1,7 @@
+[gd_resource type="RichTextEffect" load_steps=2 format=3 uid="uid://b8opi43uxojvx"]
+
+[ext_resource type="Script" path="res://addons/teeb.text_effects/effects/Cuss.gd" id="1"]
+
+[resource]
+resource_name = "Cuss"
+script = ExtResource("1")
