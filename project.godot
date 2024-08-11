@@ -11,5 +11,15 @@ config_version=5
 [application]
 
 config/name="Bones"
+run/main_scene="res://src/TestScene.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+InputHelper="*res://addons/input_helper/input_helper.gd"
+SoundManager="*res://addons/sound_manager/sound_manager.gd"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/AsepriteWizard/plugin.cfg", "res://addons/gdfxr/plugin.cfg", "res://addons/input_helper/plugin.cfg", "res://addons/log/plugin.cfg", "res://addons/sound_manager/plugin.cfg")
