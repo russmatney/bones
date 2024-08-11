@@ -1,3 +1,4 @@
+@icon("res://assets/IconGodotNode/node/icon_gear.png")
 class_name Machine
 extends Node
 
