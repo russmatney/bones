@@ -61,7 +61,12 @@ func add_menu_item(item):
 		Log.warn("Found existing button with label, skipping add_menu_item", item)
 		return
 	var button_scene = item.get("button_scene", default_button_scene)
-	var button = button_scene.instantiate()
+	var button
+	if button_scene != null:
+		button = button_scene.instantiate()
+
+	if button == null:
+		return
 
 	button.text = label
 	connect_pressed_to_action(button, item)
