@@ -108,7 +108,10 @@ func transit(target_state_name: String, ctx: Dictionary = {}):
 		state.exit()
 		state = next_state
 		next_state.enter(ctx)
-		transitioned.emit(next_state.name)
+		if next_state != null:
+			# transit can get called again WHILE transitioning...
+			#  might need to handle this better
+			transitioned.emit(next_state.name)
 	else:
 		transitioning.emit(state.name, null)
 		Log.err("Error! no next state! derp!", target_state_name, ctx)
