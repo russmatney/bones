@@ -1,6 +1,6 @@
 [gd_resource type="TileSet" load_steps=3 format=3 uid="uid://5avd3m2aroxa"]
 
-[ext_resource type="Texture2D" uid="uid://b61wws46p8qqo" path="res://addons/core/reptile/assets/64x64coldfire_sheet.png" id="1_27nix"]
+[ext_resource type="Texture2D" uid="uid://b61wws46p8qqo" path="res://addons/bones/reptile/assets/64x64coldfire_sheet.png" id="1_27nix"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8vxel"]
 texture = ExtResource("1_27nix")

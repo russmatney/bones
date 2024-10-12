@@ -7,7 +7,7 @@ path="res://.godot/imported/downward_light.aseprite-ed398746c8b6d1a3500a11f96d7c
 
 [deps]
 
-source_file="res://addons/core/assets/lights/downward_light.aseprite"
+source_file="res://addons/bones/assets/lights/downward_light.aseprite"
 dest_files=["res://.godot/imported/downward_light.aseprite-ed398746c8b6d1a3500a11f96d7c225c.res"]
 
 [params]

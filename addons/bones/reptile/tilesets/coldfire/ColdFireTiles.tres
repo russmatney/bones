@@ -1,6 +1,6 @@
 [gd_resource type="TileSet" load_steps=8 format=3 uid="uid://db48qit5jufd1"]
 
-[ext_resource type="Texture2D" uid="uid://b61wws46p8qqo" path="res://addons/core/reptile/assets/64x64coldfire_sheet.png" id="1_d6kvy"]
+[ext_resource type="Texture2D" uid="uid://b61wws46p8qqo" path="res://addons/bones/reptile/assets/64x64coldfire_sheet.png" id="1_d6kvy"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_kl15o"]
 polygon = PackedVector2Array(-4, -4, 4, -4, 4, 4, -4, 4)

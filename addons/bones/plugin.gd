@@ -5,8 +5,8 @@ var reload_scene_btn = Button.new()
 var editor_interface
 
 func _enter_tree():
-	add_autoload_singleton("Debug", "res://addons/core/Debug.gd")
-	add_autoload_singleton("Navi", "res://addons/core/navi/Navi.gd")
+	add_autoload_singleton("Debug", "res://addons/bones/Debug.gd")
+	add_autoload_singleton("Navi", "res://addons/bones/navi/Navi.gd")
 
 	editor_interface = get_editor_interface()
 

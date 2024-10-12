@@ -7,7 +7,7 @@ path="res://.godot/imported/stone_tiles.aseprite-f061ba932456a63360359a0abe9048b
 
 [deps]
 
-source_file="res://addons/core/reptile/assets/stone_tiles.aseprite"
+source_file="res://addons/bones/reptile/assets/stone_tiles.aseprite"
 dest_files=["res://.godot/imported/stone_tiles.aseprite-f061ba932456a63360359a0abe9048bb.res"]
 
 [params]

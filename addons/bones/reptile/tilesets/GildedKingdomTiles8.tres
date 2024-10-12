@@ -1,8 +1,8 @@
 [gd_resource type="TileSet" load_steps=9 format=3 uid="uid://dh4wv4l8frtl7"]
 
-[ext_resource type="Texture2D" uid="uid://wyjkgyqj0076" path="res://addons/core/reptile/assets/gilded-kingdom-tiles-8_sheet.png" id="1_5dpp3"]
-[ext_resource type="Texture2D" uid="uid://m7pqd7ox1a3b" path="res://addons/core/reptile/assets/spaceship-tiles-8_sheet.png" id="1_8tqc6"]
-[ext_resource type="Texture2D" uid="uid://b0qblnip8w0c6" path="res://addons/core/reptile/assets/wooden-boxes-tiles-8_sheet.png" id="3_feqa3"]
+[ext_resource type="Texture2D" uid="uid://wyjkgyqj0076" path="res://addons/bones/reptile/assets/gilded-kingdom-tiles-8_sheet.png" id="1_5dpp3"]
+[ext_resource type="Texture2D" uid="uid://m7pqd7ox1a3b" path="res://addons/bones/reptile/assets/spaceship-tiles-8_sheet.png" id="1_8tqc6"]
+[ext_resource type="Texture2D" uid="uid://b0qblnip8w0c6" path="res://addons/bones/reptile/assets/wooden-boxes-tiles-8_sheet.png" id="3_feqa3"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_5yy7s"]
 polygon = PackedVector2Array(-4, -4, 4, -4, 4, 4, -4, 4)

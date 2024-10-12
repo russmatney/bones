@@ -13,7 +13,7 @@ func _ready():
 	build_actions_list()
 
 
-var ActionLabel = preload("res://addons/core/actions/ActionLabel.tscn")
+var ActionLabel = preload("res://addons/bones/actions/ActionLabel.tscn")
 
 
 func build_actions_list():

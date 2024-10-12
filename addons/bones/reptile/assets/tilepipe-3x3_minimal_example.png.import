@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://addons/core/reptile/assets/tilepipe-3x3_minimal_example.png"
+source_file="res://addons/bones/reptile/assets/tilepipe-3x3_minimal_example.png"
 dest_files=["res://.godot/imported/tilepipe-3x3_minimal_example.png-bfcd50d010471a2ad8e95e46cf3426b1.ctex"]
 
 [params]

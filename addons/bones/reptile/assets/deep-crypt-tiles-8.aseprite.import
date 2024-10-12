@@ -7,7 +7,7 @@ path="res://.godot/imported/deep-crypt-tiles-8.aseprite-e506373d1b0f50c7c2b32bad
 
 [deps]
 
-source_file="res://addons/core/reptile/assets/deep-crypt-tiles-8.aseprite"
+source_file="res://addons/bones/reptile/assets/deep-crypt-tiles-8.aseprite"
 dest_files=["res://.godot/imported/deep-crypt-tiles-8.aseprite-e506373d1b0f50c7c2b32badc19940d9.res"]
 
 [params]

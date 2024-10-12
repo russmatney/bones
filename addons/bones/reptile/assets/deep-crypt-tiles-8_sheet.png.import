@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://addons/core/reptile/assets/deep-crypt-tiles-8_sheet.png"
+source_file="res://addons/bones/reptile/assets/deep-crypt-tiles-8_sheet.png"
 dest_files=["res://.godot/imported/deep-crypt-tiles-8_sheet.png-e5b821d376ac99441251fed986ea79d7.ctex"]
 
 [params]

@@ -7,7 +7,7 @@ path="res://.godot/imported/grassy-cave-tiles-8.aseprite-e864a7be0aed00e47b46013
 
 [deps]
 
-source_file="res://addons/core/reptile/assets/grassy-cave-tiles-8.aseprite"
+source_file="res://addons/bones/reptile/assets/grassy-cave-tiles-8.aseprite"
 dest_files=["res://.godot/imported/grassy-cave-tiles-8.aseprite-e864a7be0aed00e47b46013a9935c5f6.res"]
 
 [params]

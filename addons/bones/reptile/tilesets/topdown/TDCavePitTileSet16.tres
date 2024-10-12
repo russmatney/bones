@@ -1,6 +1,6 @@
 [gd_resource type="TileSet" load_steps=3 format=3 uid="uid://co3os0t7u2nbl"]
 
-[ext_resource type="Texture2D" uid="uid://ckag4caow8p41" path="res://addons/core/reptile/assets/topdown/cave_floor_pit_tiles-16_sheet.png" id="1_17vws"]
+[ext_resource type="Texture2D" uid="uid://ckag4caow8p41" path="res://addons/bones/reptile/assets/topdown/cave_floor_pit_tiles-16_sheet.png" id="1_17vws"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fc33v"]
 texture = ExtResource("1_17vws")

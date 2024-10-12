@@ -7,7 +7,7 @@ path="res://.godot/imported/gilded-kingdom-tiles-8.aseprite-7ab7bcce3d60c5bd8e3a
 
 [deps]
 
-source_file="res://addons/core/reptile/assets/gilded-kingdom-tiles-8.aseprite"
+source_file="res://addons/bones/reptile/assets/gilded-kingdom-tiles-8.aseprite"
 dest_files=["res://.godot/imported/gilded-kingdom-tiles-8.aseprite-7ab7bcce3d60c5bd8e3ab81cb999e131.res"]
 
 [params]

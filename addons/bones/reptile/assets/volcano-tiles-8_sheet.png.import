@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://addons/core/reptile/assets/volcano-tiles-8_sheet.png"
+source_file="res://addons/bones/reptile/assets/volcano-tiles-8_sheet.png"
 dest_files=["res://.godot/imported/volcano-tiles-8_sheet.png-39ea775b4da6b7a92d2cbf95a1358ec8.ctex"]
 
 [params]

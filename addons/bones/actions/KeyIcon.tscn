@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bhl8ycg0gjugp"]
 
-[ext_resource type="Theme" uid="uid://bjdxw3qjnawgi" path="res://addons/core/actions/KeyIconTheme.tres" id="1"]
+[ext_resource type="Theme" uid="uid://bjdxw3qjnawgi" path="res://addons/bones/actions/KeyIconTheme.tres" id="1"]
 
 [node name="KeyIcon" type="Label"]
 custom_minimum_size = Vector2(40, 0)

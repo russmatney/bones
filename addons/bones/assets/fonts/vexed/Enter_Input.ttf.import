@@ -7,7 +7,7 @@ path="res://.godot/imported/Enter_Input.ttf-00ae2e2a70788a847a706713c64e6374.fon
 
 [deps]
 
-source_file="res://addons/core/assets/fonts/vexed/Enter_Input.ttf"
+source_file="res://addons/bones/assets/fonts/vexed/Enter_Input.ttf"
 dest_files=["res://.godot/imported/Enter_Input.ttf-00ae2e2a70788a847a706713c64e6374.fontdata"]
 
 [params]

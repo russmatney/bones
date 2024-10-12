@@ -7,7 +7,7 @@ path="res://.godot/imported/ship_background_autotiles.aseprite-7da4ce41a7fbd4a5f
 
 [deps]
 
-source_file="res://addons/core/reptile/assets/ship_background_autotiles.aseprite"
+source_file="res://addons/bones/reptile/assets/ship_background_autotiles.aseprite"
 dest_files=["res://.godot/imported/ship_background_autotiles.aseprite-7da4ce41a7fbd4a5fd0ad33c9a150d24.res"]
 
 [params]

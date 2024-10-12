@@ -1,8 +1,8 @@
 [gd_resource type="TileSet" load_steps=7 format=3 uid="uid://ri3hfhsgowmo"]
 
-[ext_resource type="Texture2D" uid="uid://bj4j5o583vie8" path="res://addons/core/reptile/assets/grassy-cave-tiles-8_sheet.png" id="1_gw5op"]
-[ext_resource type="Texture2D" uid="uid://m7pqd7ox1a3b" path="res://addons/core/reptile/assets/spaceship-tiles-8_sheet.png" id="2_413he"]
-[ext_resource type="Texture2D" uid="uid://dsnpf5dj7lu2h" path="res://addons/core/reptile/assets/quick-tiles-8_sheet.png" id="3_mrgpc"]
+[ext_resource type="Texture2D" uid="uid://bj4j5o583vie8" path="res://addons/bones/reptile/assets/grassy-cave-tiles-8_sheet.png" id="1_gw5op"]
+[ext_resource type="Texture2D" uid="uid://m7pqd7ox1a3b" path="res://addons/bones/reptile/assets/spaceship-tiles-8_sheet.png" id="2_413he"]
+[ext_resource type="Texture2D" uid="uid://dsnpf5dj7lu2h" path="res://addons/bones/reptile/assets/quick-tiles-8_sheet.png" id="3_mrgpc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8rwk6"]
 texture = ExtResource("1_gw5op")

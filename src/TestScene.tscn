@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://c0tk2fhwdcpus"]
 
-[ext_resource type="Script" path="res://addons/core/machine/Machine.gd" id="1_3uwv4"]
-[ext_resource type="Script" path="res://addons/core/machine/State.gd" id="2_g3l5a"]
+[ext_resource type="Script" path="res://addons/bones/machine/Machine.gd" id="1_3uwv4"]
+[ext_resource type="Script" path="res://addons/bones/machine/State.gd" id="2_g3l5a"]
 
 [node name="TestScene" type="Node2D"]
 

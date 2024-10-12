@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://addons/core/reptile/assets/topdown/cave_wall_tiles-16_sheet.png"
+source_file="res://addons/bones/reptile/assets/topdown/cave_wall_tiles-16_sheet.png"
 dest_files=["res://.godot/imported/cave_wall_tiles-16_sheet.png-c1afdbad0a21f09519914c59749c5330.ctex"]
 
 [params]

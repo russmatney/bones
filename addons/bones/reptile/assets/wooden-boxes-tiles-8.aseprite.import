@@ -7,7 +7,7 @@ path="res://.godot/imported/wooden-boxes-tiles-8.aseprite-904029b8a9c245dc49afb4
 
 [deps]
 
-source_file="res://addons/core/reptile/assets/wooden-boxes-tiles-8.aseprite"
+source_file="res://addons/bones/reptile/assets/wooden-boxes-tiles-8.aseprite"
 dest_files=["res://.godot/imported/wooden-boxes-tiles-8.aseprite-904029b8a9c245dc49afb4bfdabc29c4.res"]
 
 [params]

@@ -7,7 +7,7 @@ path="res://.godot/imported/spaceship-tiles-8.aseprite-631980b647f8fa982f37ce365
 
 [deps]
 
-source_file="res://addons/core/reptile/assets/spaceship-tiles-8.aseprite"
+source_file="res://addons/bones/reptile/assets/spaceship-tiles-8.aseprite"
 dest_files=["res://.godot/imported/spaceship-tiles-8.aseprite-631980b647f8fa982f37ce3659facf0a.res"]
 
 [params]

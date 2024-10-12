@@ -19,9 +19,9 @@ func _ready():
 		first_scene = first
 
 	set_main_menu("res://src/menus/MainMenu.tscn")
-	set_pause_menu("res://addons/core/navi/NaviPauseMenu.tscn")
-	set_win_menu("res://addons/core/navi/NaviWinMenu.tscn")
-	set_death_menu("res://addons/core/navi/NaviDeathMenu.tscn")
+	set_pause_menu("res://addons/bones/navi/NaviPauseMenu.tscn")
+	set_win_menu("res://addons/bones/navi/NaviWinMenu.tscn")
+	set_death_menu("res://addons/bones/navi/NaviDeathMenu.tscn")
 
 ## input ###################################################################
 

@@ -7,7 +7,7 @@ path="res://.godot/imported/cave_floor_pit_tiles-16.aseprite-f4c6ea93bfb2ab2aa40
 
 [deps]
 
-source_file="res://addons/core/reptile/assets/topdown/cave_floor_pit_tiles-16.aseprite"
+source_file="res://addons/bones/reptile/assets/topdown/cave_floor_pit_tiles-16.aseprite"
 dest_files=["res://.godot/imported/cave_floor_pit_tiles-16.aseprite-f4c6ea93bfb2ab2aa40e6959131511a3.res"]
 
 [params]

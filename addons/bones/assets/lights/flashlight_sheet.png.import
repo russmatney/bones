@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://addons/core/assets/lights/flashlight_sheet.png"
+source_file="res://addons/bones/assets/lights/flashlight_sheet.png"
 dest_files=["res://.godot/imported/flashlight_sheet.png-a0f8d6f6bdcadc828b8b284a224a5167.ctex"]
 
 [params]

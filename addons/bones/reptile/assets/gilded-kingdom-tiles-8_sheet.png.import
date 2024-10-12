@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://addons/core/reptile/assets/gilded-kingdom-tiles-8_sheet.png"
+source_file="res://addons/bones/reptile/assets/gilded-kingdom-tiles-8_sheet.png"
 dest_files=["res://.godot/imported/gilded-kingdom-tiles-8_sheet.png-f90c94c2d6d26c6f67dbbbf991a676be.ctex"]
 
 [params]

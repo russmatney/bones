@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://addons/core/reptile/assets/snow_tiles-16_sheet.png"
+source_file="res://addons/bones/reptile/assets/snow_tiles-16_sheet.png"
 dest_files=["res://.godot/imported/snow_tiles-16_sheet.png-2512dba62699348fa498ee529d82420f.ctex"]
 
 [params]

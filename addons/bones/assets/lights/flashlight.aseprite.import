@@ -7,7 +7,7 @@ path="res://.godot/imported/flashlight.aseprite-2c8e27a144a16b63094272fd462c08ef
 
 [deps]
 
-source_file="res://addons/core/assets/lights/flashlight.aseprite"
+source_file="res://addons/bones/assets/lights/flashlight.aseprite"
 dest_files=["res://.godot/imported/flashlight.aseprite-2c8e27a144a16b63094272fd462c08ef.res"]
 
 [params]

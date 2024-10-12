@@ -7,7 +7,7 @@ path="res://.godot/imported/64x64white_tiles.aseprite-160d90da747fb77c4fa3fb8638
 
 [deps]
 
-source_file="res://addons/core/reptile/assets/64x64white_tiles.aseprite"
+source_file="res://addons/bones/reptile/assets/64x64white_tiles.aseprite"
 dest_files=["res://.godot/imported/64x64white_tiles.aseprite-160d90da747fb77c4fa3fb8638c3d8ad.res"]
 
 [params]

@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://addons/core/reptile/assets/32x32-dungeon-walls_sheet.png"
+source_file="res://addons/bones/reptile/assets/32x32-dungeon-walls_sheet.png"
 dest_files=["res://.godot/imported/32x32-dungeon-walls_sheet.png-767d70edb7f078ff0ae2c120dd155d75.ctex"]
 
 [params]

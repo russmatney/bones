@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://addons/core/assets/lights/light64px_sheet.png"
+source_file="res://addons/bones/assets/lights/light64px_sheet.png"
 dest_files=["res://.godot/imported/light64px_sheet.png-21ff3eb5dac80f7e687d49ae59325fa7.ctex"]
 
 [params]

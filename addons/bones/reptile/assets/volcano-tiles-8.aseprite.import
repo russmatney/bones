@@ -7,7 +7,7 @@ path="res://.godot/imported/volcano-tiles-8.aseprite-3513054e69eeeb67b63f9651a71
 
 [deps]
 
-source_file="res://addons/core/reptile/assets/volcano-tiles-8.aseprite"
+source_file="res://addons/bones/reptile/assets/volcano-tiles-8.aseprite"
 dest_files=["res://.godot/imported/volcano-tiles-8.aseprite-3513054e69eeeb67b63f9651a71e25dd.res"]
 
 [params]

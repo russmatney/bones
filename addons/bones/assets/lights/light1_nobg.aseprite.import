@@ -7,7 +7,7 @@ path="res://.godot/imported/light1_nobg.aseprite-b59ea66e103b5e376e0bdc2135c4c53
 
 [deps]
 
-source_file="res://addons/core/assets/lights/light1_nobg.aseprite"
+source_file="res://addons/bones/assets/lights/light1_nobg.aseprite"
 dest_files=["res://.godot/imported/light1_nobg.aseprite-b59ea66e103b5e376e0bdc2135c4c53c.res"]
 
 [params]

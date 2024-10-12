@@ -7,7 +7,7 @@ path="res://.godot/imported/quick-tiles.aseprite-cda9936b80f38957fa1d0ad2a907395
 
 [deps]
 
-source_file="res://addons/core/reptile/assets/quick-tiles.aseprite"
+source_file="res://addons/bones/reptile/assets/quick-tiles.aseprite"
 dest_files=["res://.godot/imported/quick-tiles.aseprite-cda9936b80f38957fa1d0ad2a907395f.res"]
 
 [params]

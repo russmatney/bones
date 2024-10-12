@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://addons/core/reptile/assets/16x16coldfire_sheet.png"
+source_file="res://addons/bones/reptile/assets/16x16coldfire_sheet.png"
 dest_files=["res://.godot/imported/16x16coldfire_sheet.png-f8253952d9deec26a0fb4f293b394540.ctex"]
 
 [params]

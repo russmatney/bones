@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://addons/core/reptile/assets/32x32autumnglow_tiles_sheet.png"
+source_file="res://addons/bones/reptile/assets/32x32autumnglow_tiles_sheet.png"
 dest_files=["res://.godot/imported/32x32autumnglow_tiles_sheet.png-eccc12d8e5be261b89ce7b6bed1d3ff8.ctex"]
 
 [params]

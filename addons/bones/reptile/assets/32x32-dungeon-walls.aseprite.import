@@ -7,7 +7,7 @@ path="res://.godot/imported/32x32-dungeon-walls.aseprite-579720c595fb6cec1b5d5ec
 
 [deps]
 
-source_file="res://addons/core/reptile/assets/32x32-dungeon-walls.aseprite"
+source_file="res://addons/bones/reptile/assets/32x32-dungeon-walls.aseprite"
 dest_files=["res://.godot/imported/32x32-dungeon-walls.aseprite-579720c595fb6cec1b5d5ecde87a5b0b.res"]
 
 [params]

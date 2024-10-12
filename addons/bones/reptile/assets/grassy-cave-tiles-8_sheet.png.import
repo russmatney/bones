@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://addons/core/reptile/assets/grassy-cave-tiles-8_sheet.png"
+source_file="res://addons/bones/reptile/assets/grassy-cave-tiles-8_sheet.png"
 dest_files=["res://.godot/imported/grassy-cave-tiles-8_sheet.png-1b19e0e0dcfa02c1c6f3ae3bec221fb2.ctex"]
 
 [params]

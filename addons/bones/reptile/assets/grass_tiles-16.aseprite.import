@@ -7,7 +7,7 @@ path="res://.godot/imported/grass_tiles-16.aseprite-52b13c77e6a90ab1e6f3b0bb5929
 
 [deps]
 
-source_file="res://addons/core/reptile/assets/grass_tiles-16.aseprite"
+source_file="res://addons/bones/reptile/assets/grass_tiles-16.aseprite"
 dest_files=["res://.godot/imported/grass_tiles-16.aseprite-52b13c77e6a90ab1e6f3b0bb592966b6.res"]
 
 [params]

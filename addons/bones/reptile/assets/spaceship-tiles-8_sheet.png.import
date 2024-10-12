@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://addons/core/reptile/assets/spaceship-tiles-8_sheet.png"
+source_file="res://addons/bones/reptile/assets/spaceship-tiles-8_sheet.png"
 dest_files=["res://.godot/imported/spaceship-tiles-8_sheet.png-37e083c0cacc288c827af6b6fa7c8f5c.ctex"]
 
 [params]

@@ -1,6 +1,6 @@
 [gd_resource type="TileSet" load_steps=5 format=3 uid="uid://uuhwfbymqdt8"]
 
-[ext_resource type="Texture2D" uid="uid://rk61rhjkabem" path="res://addons/core/reptile/assets/stone_tiles_sheet.png" id="1_0vn51"]
+[ext_resource type="Texture2D" uid="uid://rk61rhjkabem" path="res://addons/bones/reptile/assets/stone_tiles_sheet.png" id="1_0vn51"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_0qxno"]
 polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)

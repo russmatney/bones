@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://b21ekhevx55qr"]
 
-[ext_resource type="Texture2D" uid="uid://bxx0qf76r3x6n" path="res://addons/core/reptile/assets/16x16coldfire_sheet.png" id="1_6kp46"]
+[ext_resource type="Texture2D" uid="uid://bxx0qf76r3x6n" path="res://addons/bones/reptile/assets/16x16coldfire_sheet.png" id="1_6kp46"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_0pig1"]
 polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)

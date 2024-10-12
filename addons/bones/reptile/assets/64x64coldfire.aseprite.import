@@ -7,7 +7,7 @@ path="res://.godot/imported/64x64coldfire.aseprite-214f9a167ff2ca760ec0a1d4b498c
 
 [deps]
 
-source_file="res://addons/core/reptile/assets/64x64coldfire.aseprite"
+source_file="res://addons/bones/reptile/assets/64x64coldfire.aseprite"
 dest_files=["res://.godot/imported/64x64coldfire.aseprite-214f9a167ff2ca760ec0a1d4b498c2f7.res"]
 
 [params]

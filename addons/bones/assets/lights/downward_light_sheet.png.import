@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://addons/core/assets/lights/downward_light_sheet.png"
+source_file="res://addons/bones/assets/lights/downward_light_sheet.png"
 dest_files=["res://.godot/imported/downward_light_sheet.png-25003693569b0f0e02d100fe44800632.ctex"]
 
 [params]

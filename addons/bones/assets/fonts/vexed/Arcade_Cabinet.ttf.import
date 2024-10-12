@@ -7,7 +7,7 @@ path="res://.godot/imported/Arcade_Cabinet.ttf-74a33f0a32c12bd1090a037ffbaf291d.
 
 [deps]
 
-source_file="res://addons/core/assets/fonts/vexed/Arcade_Cabinet.ttf"
+source_file="res://addons/bones/assets/fonts/vexed/Arcade_Cabinet.ttf"
 dest_files=["res://.godot/imported/Arcade_Cabinet.ttf-74a33f0a32c12bd1090a037ffbaf291d.fontdata"]
 
 [params]

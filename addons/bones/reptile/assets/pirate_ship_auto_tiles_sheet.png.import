@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://addons/core/reptile/assets/pirate_ship_auto_tiles_sheet.png"
+source_file="res://addons/bones/reptile/assets/pirate_ship_auto_tiles_sheet.png"
 dest_files=["res://.godot/imported/pirate_ship_auto_tiles_sheet.png-8a83e7794303305dd7f1d5b16aa6854e.ctex"]
 
 [params]

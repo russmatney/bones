@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://addons/core/assets/lights/small_light3_nobg_sheet.png"
+source_file="res://addons/bones/assets/lights/small_light3_nobg_sheet.png"
 dest_files=["res://.godot/imported/small_light3_nobg_sheet.png-75892f8746483d99ba91e3e5083a08a2.ctex"]
 
 [params]

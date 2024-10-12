@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://addons/core/reptile/assets/quick-tiles_sheet.png"
+source_file="res://addons/bones/reptile/assets/quick-tiles_sheet.png"
 dest_files=["res://.godot/imported/quick-tiles_sheet.png-fc072f9f3cdd8f2a0120ecb435d23f99.ctex"]
 
 [params]

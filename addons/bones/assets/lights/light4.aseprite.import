@@ -7,7 +7,7 @@ path="res://.godot/imported/light4.aseprite-6ef265fa58a58b2967c648c07f468e2a.res
 
 [deps]
 
-source_file="res://addons/core/assets/lights/light4.aseprite"
+source_file="res://addons/bones/assets/lights/light4.aseprite"
 dest_files=["res://.godot/imported/light4.aseprite-6ef265fa58a58b2967c648c07f468e2a.res"]
 
 [params]

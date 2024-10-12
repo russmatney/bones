@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://addons/core/reptile/assets/ship_background_autotiles_sheet.png"
+source_file="res://addons/bones/reptile/assets/ship_background_autotiles_sheet.png"
 dest_files=["res://.godot/imported/ship_background_autotiles_sheet.png-017a796b4ae4b704b7ef7b858eb94e52.ctex"]
 
 [params]
