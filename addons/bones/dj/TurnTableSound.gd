@@ -16,7 +16,8 @@ func _on_play_pressed():
 	# Sounds.play(Sounds.S[sound_name_text])
 
 func _on_stop_pressed():
-	Sounds.interrupt(Sounds.S[sound_name_text])
+	pass
+	# Sounds.interrupt(Sounds.S[sound_name_text])
 
 func set_sound(text):
 	sound_name_text = text

@@ -7,7 +7,7 @@ func _ready():
 	for c in get_children():
 		c.free()
 
-	for s in Sounds.S.keys():
-		var tt = tt_sound.instantiate()
-		tt.ready.connect(tt.set_sound.bind(s))
-		add_child(tt)
+	# for s in Sounds.S.keys():
+	# 	var tt = tt_sound.instantiate()
+	# 	tt.ready.connect(tt.set_sound.bind(s))
+	# 	add_child(tt)
