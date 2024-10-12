@@ -9,6 +9,21 @@ like [Blox](https://github.com/russmatney/blox),
 [Overculted](https://github.com/moonstorm-clerics/overculted-prototype), and
 [Terrorware](https://github.com/moonstorm-clerics/terrorware-prototype).
 
+## Components
+
+Static classes:
+
+- Util (class_name `U`)
+  - a slew of static helper functions for a variety of cases
+- Reptile
+
+Autoloads:
+
+- Navi
+- Debug
+- Juice
+- DJ
+
 ## Background
 
 [Dino](https://github.com/russmatney/dino) was originally a games 'monorepo' - I
