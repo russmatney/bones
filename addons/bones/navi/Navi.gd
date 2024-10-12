@@ -147,13 +147,13 @@ func pause():
 	if pause_menu and is_instance_valid(pause_menu):
 		pause_menu.show()
 		find_focus(pause_menu)
-	Music.switch_to_pause_music()
+	# Music.switch_to_pause_music()
 	pause_toggled.emit(true)
 
 func resume():
 	get_tree().paused = false
 	hide_menus()
-	Music.switch_to_game_music()
+	# Music.switch_to_game_music()
 	pause_toggled.emit(false)
 
 ## menus ###################################################################
@@ -252,7 +252,7 @@ func set_death_menu(path_or_scene):
 		Log.warn("No scene at path: ", path, ", can't set death menu.")
 
 func show_death_menu():
-	Music.pause_game_song()
+	# Music.pause_game_song()
 	death_menu.show()
 	find_focus(death_menu)
 
@@ -278,7 +278,7 @@ func set_win_menu(path_or_scene):
 		Log.warn("No scene at path: ", path, ", can't set win menu.")
 
 func show_win_menu():
-	Music.pause_game_song()
+	# Music.pause_game_song()
 	win_menu.show()
 	find_focus(win_menu)
 

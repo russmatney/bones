@@ -634,7 +634,9 @@ static func find_level_root(node):
 	if parent == null:
 		var t = node.get_tree()
 		if t == null:
-			return Navi.get_tree().current_scene
+			# TODO drop navi dep (or this func completely)
+			pass
+			# return Navi.get_tree().current_scene
 		else:
 			return node.get_tree().current_scene
 	elif parent.has_method("add_child_to_level"):
@@ -647,10 +649,11 @@ static func find_level_root(node):
 static func has_focus(node: Node) -> bool:
 	if node.has_focus():
 		return true
-	else:
-		for ch in node.get_children():
-			if U.has_focus(ch):
-				return true
+	# else:
+		# for ch in node.get_children():
+			# TODO is this static-self-reference allowed?
+			# if U.has_focus(ch):
+			# 	return true
 	return false
 
 static func get_focusable_children(container: Node) -> Array[Node]:
