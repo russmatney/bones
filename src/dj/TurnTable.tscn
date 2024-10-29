@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://idppjgt76c6l"]
 
-[ext_resource type="Script" path="res://addons/bones/dj/TurnTable.gd" id="1_7jl3k"]
-[ext_resource type="FontFile" uid="uid://d06oxhmw5eq58" path="res://addons/bones/assets/fonts/vexed/Arcade_Cabinet.ttf" id="2_ihsvu"]
-[ext_resource type="PackedScene" uid="uid://b4qyb66xixys8" path="res://addons/bones/dj/DJZSoundBoard.tscn" id="2_u6pk3"]
+[ext_resource type="Script" path="res://src/dj/TurnTable.gd" id="1_7jl3k"]
+[ext_resource type="FontFile" uid="uid://b0w8s6hidvrrr" path="res://addons/bones/assets/fonts/Born2bSportyV2.ttf" id="2_4wcrj"]
+[ext_resource type="PackedScene" uid="uid://b4qyb66xixys8" path="res://src/dj/DJZSoundBoard.tscn" id="2_u6pk3"]
 [ext_resource type="FontFile" uid="uid://b1c3fty8httvk" path="res://addons/bones/assets/fonts/at01.ttf" id="3_o7tfw"]
 
 [node name="TurnTable" type="Control"]
@@ -32,7 +32,8 @@ alignment = 1
 clip_contents = false
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_fonts/normal_font = ExtResource("2_ihsvu")
+theme_override_fonts/normal_font = ExtResource("2_4wcrj")
+theme_override_font_sizes/normal_font_size = 32
 bbcode_enabled = true
 text = "[center]DJ TurnTable[/center]"
 fit_content = true
