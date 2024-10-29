@@ -5,7 +5,6 @@ extends Node
 
 var first_scene
 var current_scene
-var last_scene_stack = []
 
 ## ready ###################################################################
 
@@ -68,18 +67,13 @@ func find_focus(scene=null):
 # Supports a path, packed_scene, or instance of a scene
 func nav_to(scene, opts={}):
 	Log.info("nav_to: ", scene, opts)
-	# NOTE this scene stack grows forever!
-	last_scene_stack.push_back(scene)
 	hide_menus()
 	_deferred_goto_scene.call_deferred(scene, opts)
 	# ensure unpaused
 	resume()
 
 func _deferred_goto_scene(scene, opts={}):
-	if first_scene != null and is_instance_valid(first_scene):
-		first_scene.queue_free()
-	if current_scene != null and is_instance_valid(current_scene):
-		current_scene.queue_free()
+	get_tree().current_scene.queue_free()
 
 	var next_scene
 	if scene is String:
@@ -98,8 +92,17 @@ func _deferred_goto_scene(scene, opts={}):
 		if opts.setup != null:
 			opts.setup.call(next_scene)
 
-	current_scene = next_scene
+	if "on_ready" in opts:
+		next_scene.ready.connect(func():
+			opts.on_ready.call(next_scene))
 
+	# default to waiting for the current_scene to be freed
+	if not opts.get("skip_await"):
+		if get_tree().current_scene:
+			await get_tree().current_scene.tree_exited
+
+	# for navi's tracking
+	current_scene = next_scene
 	# Add it as a child of root
 	get_tree().get_root().add_child(current_scene)
 	# compatibility with SceneTree.change_scene_to_file()
