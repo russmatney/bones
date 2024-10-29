@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bnqeglracii41"]
 
 [ext_resource type="Script" path="res://src/dj/TurnTableSound.gd" id="1_d18qe"]
-[ext_resource type="FontFile" uid="uid://b0w8s6hidvrrr" path="res://addons/bones/assets/fonts/Born2bSportyV2.ttf" id="1_jf6l1"]
+[ext_resource type="FontFile" uid="uid://b0w8s6hidvrrr" path="res://addons/bones/fonts/Born2bSportyV2.ttf" id="1_jf6l1"]
 
 [node name="TurnTableSound" type="HBoxContainer"]
 custom_minimum_size = Vector2(0, 36)

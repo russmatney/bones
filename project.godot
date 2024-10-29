@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Bones"
 run/main_scene="res://src/TestScene.tscn"
-config/features=PackedStringArray("4.2", "Forward Plus")
+config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
@@ -21,7 +21,15 @@ InputHelper="*res://addons/input_helper/input_helper.gd"
 SoundManager="*res://addons/sound_manager/sound_manager.gd"
 Debug="*res://addons/bones/Debug.gd"
 Navi="*res://addons/bones/navi/Navi.gd"
+Juice="*res://addons/bones/Juice.gd"
+DJ="*res://addons/bones/DJ.gd"
 
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/AsepriteWizard/plugin.cfg", "res://addons/bones/plugin.cfg", "res://addons/gdfxr/plugin.cfg", "res://addons/input_helper/plugin.cfg", "res://addons/log/plugin.cfg", "res://addons/sound_manager/plugin.cfg")
+
+[file_customization]
+
+folder_colors={
+"res://addons/bones/": "orange"
+}
