@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://cqbmbmrwoifd2"
+path="res://.godot/imported/32x32-tilemap-template.aseprite-d0511d04bf3c83d37ab62d0d0810164f.res"
+
+[deps]
+
+source_file="res://src/reptile/templates/32x32-tilemap-template.aseprite"
+dest_files=["res://.godot/imported/32x32-tilemap-template.aseprite-d0511d04bf3c83d37ab62d0d0810164f.res"]
+
+[params]
+

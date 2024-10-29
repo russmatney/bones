@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bsg3ke44ryak7"]
+
+[ext_resource type="TileSet" uid="uid://ctl3my2n2y1tk" path="res://src/reptile/tilemaps/AutumnGlowTileSet.tres" id="1_kgvio"]
+
+[node name="AutumnGlowTiles" type="TileMapLayer"]
+tile_set = ExtResource("1_kgvio")
