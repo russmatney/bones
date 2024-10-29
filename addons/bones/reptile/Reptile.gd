@@ -310,3 +310,20 @@ static func disable_occlusion(tilemap):
 	var tileset = tilemap.get_tileset()
 	for i in range(tileset.get_occlusion_layers_count()):
 		tileset.set_occlusion_layer_light_mask(i, 0)
+
+## destroy tiles w/ collision
+
+static func destroy_tile_with_rid(tmap, rid):
+	var coords = tmap.get_coords_for_body_rid(rid)
+	if coords:
+		var tile_data = tmap.get_cell_tile_data(0, coords)
+		if tile_data:
+			var mat = tile_data.material
+			if mat is ShaderMaterial:
+				mat.set_shader_parameter("offset", mat.get_shader_parameter("fade"))
+			else:
+				tmap.erase_cell(0, coords)
+		else:
+			tmap.erase_cell(0, coords)
+		return true
+	return false
