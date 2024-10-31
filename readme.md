@@ -11,13 +11,18 @@ like [Blox](https://github.com/russmatney/blox),
 
 ## Components
 
+Before static classes, I was using Autoloads similarly to namespaces - for easy
+access to functions. Most of that functionality has been converted to static
+classes instead. I'm ironing out and minimizing the remaining stateful behavior
+to reduce the autoloads even further.
+
 Static classes:
 
 - Util (class_name `U`)
   - a slew of static helper functions for a variety of cases
 - Reptile
 
-Autoloads:
+Autoloads (to be reduced!):
 
 - Navi
 - Debug
@@ -44,4 +49,11 @@ systems that are specific to that game.
 I want to pull over the patterns and the code, but leave most of the assets
 (or maybe leave some placeholders in place for help getting started.)
 
+
+## Structure
+
+The consumable portion of bones is in `addons/bones/*` - I've started pulling
+some ideas and helpers into `src/*` for things that are not production ready or
+otherwise don't work well across projects (like resources with random uids that
+get reset per project by godot :eyeroll:)
 
