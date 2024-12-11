@@ -107,16 +107,6 @@ var shake_rotation
 var trans_noise_ctx
 var rot_noise_ctx
 
-var original_offset = Vector2()
-var original_rotation = 0
-
-# func _ready():
-# 	var cam = current_camera()
-# 	if cam:
-# 		# TODO update to hook into camera creation/is_current
-# 		original_offset = cam.offset
-# 		original_rotation = cam.rotation
-
 func current_camera():
 	var cam = get_viewport().get_camera_2d()
 	if cam and is_instance_valid(cam):
@@ -126,9 +116,8 @@ func current_pcam_host():
 	var cam = current_camera()
 	if cam:
 		for ch in cam.get_children():
-			pass
-			# if ch is PhantomCameraHost:
-			# 	return ch
+			if ch is PhantomCameraHost:
+				return ch
 
 func current_pcam():
 	var pcam
@@ -145,12 +134,9 @@ func screenshake_reset():
 	trans_noise_ctx = null
 	rot_noise_ctx = null
 
-	var cam = current_camera()
 	var pcam = current_pcam()
-	if cam:
-		cam.offset = original_offset
 	if pcam:
-		pcam.rotation = original_rotation
+		pcam.emit_noise(Transform2D())
 
 func process_shake(delta):
 	if trauma > 0:
@@ -167,12 +153,11 @@ func process_shake(delta):
 			screenshake_translational(trans_noise_ctx, delta)
 			screenshake_rotational(rot_noise_ctx, delta)
 
-	var cam = current_camera()
+	# TODO don't fetch cams every frame
 	var pcam = current_pcam()
-	if cam and shake_offset:
-		cam.offset = original_offset + shake_offset
 	if pcam and shake_rotation:
-		pcam.set_rotation(original_rotation + shake_rotation)
+		var transform = Transform2D(shake_rotation, shake_offset)
+		pcam.emit_noise(transform)
 
 var noise_inputs = {
 	"seed": 4,
