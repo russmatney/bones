@@ -5,49 +5,55 @@ class_name NaviButtonList
 @export var default_button_scene: PackedScene = preload("res://addons/bones/navi/ui/MenuButton.tscn")
 
 # set a local member for the Navi autoload, to ease testing
-var _navi = Navi
+var _navi: Navi = Navi
 
 ## config warnings #####################################################################
 
-func _get_configuration_warnings():
+func _get_configuration_warnings() -> PackedStringArray:
 	if default_button_scene == null:
 		return ["No default_button_scene set"]
 	return []
 
 ## ready #####################################################################
 
-func _ready():
+func _ready() -> void:
 	if Engine.is_editor_hint():
 		request_ready()
 
 	set_focus()
 
-func set_focus():
+func set_focus() -> void:
 	# nice default... if nothing else has focus?
 	# do parents still get to override this?
-	var chs = get_children()
+	var chs := get_children()
 	if len(chs) > 0:
-		chs[0].grab_focus()
+		for ch: Node in chs:
+			if ch is Control:
+				(ch as Control).grab_focus()
+				break
 	else:
 		Log.warn(self, "no children, can't grab focus")
 
-	var btns = get_buttons()
+	var btns := get_buttons()
 	if len(btns) > 0:
-		btns[0].grab_focus()
+		for btn: Node in btns:
+			if btn is Control:
+				(btn as Control).grab_focus()
+				break
 
 ## add_menu_item #####################################################################
 
-func get_buttons():
+func get_buttons() -> Array:
 	return get_children()
 
-func clear():
-	for b in get_buttons():
+func clear() -> void:
+	for b: Node in get_buttons():
 		if is_instance_valid(b):
 			b.queue_free()
 
-func add_menu_item(item):
+func add_menu_item(item: Dictionary) -> void:
 	# read texts from buttons in scene
-	var texts = []
+	var texts := []
 	for but in get_buttons():
 		if not but.is_queued_for_deletion():
 			texts.append(but.text)
