@@ -26,7 +26,7 @@ func _ready():
 	toggle_mute_sound_btn.pressed.connect(DJ.toggle_mute_sound)
 
 	DJ.mute_toggle.connect(update_mute_status)
-	update_mute_status
+	update_mute_status()
 
 func update_mute_status():
 	mute_all_btn.disabled = DJ.muted_sound and DJ.muted_music

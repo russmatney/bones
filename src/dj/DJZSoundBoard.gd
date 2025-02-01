@@ -1,7 +1,7 @@
 @tool
 extends VBoxContainer
 
-@onready var tt_sound = preload("res://addons/bones/dj/TurnTableSound.tscn")
+@onready var tt_sound = preload("res://src/dj/TurnTableSound.tscn")
 
 func _ready():
 	for c in get_children():
