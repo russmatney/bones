@@ -12,7 +12,7 @@ var button_defs := [
 	},
 	{
 		label="Quit Game",
-		fn=func(): get_tree().quit(),
+		fn=func() -> void: get_tree().quit(),
 	},
 ]
 

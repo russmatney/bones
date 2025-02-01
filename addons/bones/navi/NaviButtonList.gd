@@ -54,61 +54,66 @@ func clear() -> void:
 func add_menu_item(item: Dictionary) -> void:
 	# read texts from buttons in scene
 	var texts := []
-	for but in get_buttons():
+	for but: Button in get_buttons():
 		if not but.is_queued_for_deletion():
 			texts.append(but.text)
 
-	var hide_fn = item.get("hide_fn")
-	if hide_fn and hide_fn.call():
+	var hide_fn: Variant = item.get("hide_fn", null)
+	@warning_ignore("unsafe_method_access")
+	if hide_fn != null and hide_fn is Callable and hide_fn.call():
 		return
 
-	var label = item.get("label", "Fallback Label")
+	var label: Variant = item.get("label", "Fallback Label")
 	if label is Callable:
+		@warning_ignore("unsafe_method_access")
 		label = label.call()
 	if label in texts:
 		Log.warn("Found existing button with label, skipping add_menu_item", item)
 		return
-	var button_scene = item.get("button_scene", default_button_scene)
-	var button
+	var button_scene: PackedScene = item.get("button_scene", default_button_scene)
+	var button: Variant
 	if button_scene != null:
 		button = button_scene.instantiate()
 
 	if button == null:
 		return
+	
+	var btn: Button = button
 
-	button.text = label
-	connect_pressed_to_action(button, item)
-	add_child(button)
+	btn.text = label
+	connect_pressed_to_action(btn, item)
+	add_child(btn)
 
-func set_menu_items(items):
+func set_menu_items(items: Array) -> void:
 	clear()
-	for it in items:
+	for it: Dictionary in items:
 		add_menu_item(it)
 
-func no_op():
+func no_op() -> void:
 	Log.warn("button created with no method")
 
 
-func connect_pressed_to_action(button, item):
-	var nav_to = item.get("nav_to", false)
+func connect_pressed_to_action(button: Button, item: Dictionary) -> void:
+	var nav_to: Variant = item.get("nav_to", false)
 
-	var fn
-	var arg
-	var argv
+	var fn: Variant
+	var arg: Variant
+	var argv: Array
 	if nav_to:
 		fn = _navi.nav_to
 		arg = nav_to
 	else:
-		arg = item.get("arg")
-		argv = item.get("argv")
+		arg = item.get("arg", null)
+		argv = item.get("argv", [])
 		fn = item.get("fn")
 
 	if nav_to == null and fn == null:
 		button.set_disabled(true)
 		Log.warn("Menu item missing handler", item)
 		return
-	elif nav_to:
-		if not ResourceLoader.exists(nav_to):
+	elif nav_to is String:
+		var nav_str: String = nav_to
+		if not ResourceLoader.exists(nav_str):
 			button.set_disabled(true)
 			Log.warn("Menu item with non-existent nav-to", item)
 			return
@@ -117,15 +122,17 @@ func connect_pressed_to_action(button, item):
 		button.set_disabled(true)
 		Log.warn("Menu item handler invalid", item)
 		return
+	var f: Callable = fn
 
 	if item.get("is_disabled"):
+		@warning_ignore("unsafe_method_access")
 		if item.is_disabled.call():
 			button.set_disabled(true)
 			return
 
 	if arg:
-		button.pressed.connect(fn.bind(arg))
+		button.pressed.connect(f.bind(arg))
 	elif argv:
-		button.pressed.connect(fn.bindv(argv))
+		button.pressed.connect(f.bindv(argv))
 	else:
-		button.pressed.connect(fn)
+		button.pressed.connect(f)
