@@ -116,8 +116,11 @@ func current_pcam_host():
 	var cam = current_camera()
 	if cam:
 		for ch in cam.get_children():
-			if ch is PhantomCameraHost:
-				return ch
+			pass
+			# TODO how to avoid phantomCamera dep? or do we just add it?
+			# if ch is PhantomCameraHost:
+			# 	return ch
+
 
 func current_pcam():
 	var pcam
