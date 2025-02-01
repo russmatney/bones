@@ -4,13 +4,13 @@ class_name Reptile
 
 ## generate random image ######################################################################
 
-static func generate_image(inputs):
+static func generate_image(inputs: Dictionary) -> Image:
 	# validating inputs
 	if not "octaves" in inputs:
 		Log.warn("nil octaves...")
 		return
 
-	var noise = FastNoiseLite.new()
+	var noise := FastNoiseLite.new()
 	noise.noise_type = FastNoiseLite.TYPE_SIMPLEX_SMOOTH
 	noise.seed = inputs["seed"]
 	noise.fractal_octaves = inputs["octaves"]
@@ -18,33 +18,35 @@ static func generate_image(inputs):
 	noise.fractal_gain = inputs.get("gain", inputs.get("persistence"))
 	noise.frequency = inputs.get("frequency", 1.0 / inputs.get("period", 20.0))
 
-	return noise.get_seamless_image(inputs["img_size"], inputs["img_size"])
+	var img_size: int = inputs["img_size"]
+	return noise.get_seamless_image(img_size, img_size)
 
 ## img helpers #####################################################################
 
-static func all_coords(img):
-	var coords = []
+static func all_coords(img: Image) -> Array:
+	var coords := []
 	for x in img.get_width():
 		for y in img.get_height():
 			coords.append(Vector2(x, y))
 	return coords
 
-static func rotate(img):
-	var new_img = Image.new()
+static func rotate(img: Image) -> Image:
+	var new_img := Image.new()
 	new_img.copy_from(img)
-	for coord in all_coords(img):
+	for coord: Vector2 in all_coords(img):
+		@warning_ignore("narrowing_conversion")
 		new_img.set_pixel(coord.y, coord.x, img.get_pixelv(coord))
 	return new_img
 
 ## img stats #####################################################################
 
-static func img_stats(img):
-	var vals = []
-	var stats = {"min": 1, "max": 0}
+static func img_stats(img: Image) -> Dictionary:
+	var vals := []
+	var stats := {"min": 1, "max": 0}
 	for x in img.get_width():
 		for y in img.get_height():
-			var pix = img.get_pixel(x, y)
-			var val = pix.r
+			var pix := img.get_pixel(x, y)
+			var val := pix.r
 			if val < stats["min"]:
 				stats["min"] = val
 			if val > stats["max"]:
@@ -54,55 +56,57 @@ static func img_stats(img):
 	# stats["vals"] = vals
 	return stats
 
-static func normalized_val(stats, val):
+static func normalized_val(stats: Dictionary, val: float) -> float:
 	val = val - stats["min"]
 	return val / stats["variance"]
 
 ## tilemap/cell helpers #####################################################################
 
-static func get_layers(tilemap):
-	var layers = []
+static func get_layers(tilemap: TileMap) -> Array:
+	var layers := []
 	for i in range(tilemap.get_layers_count()):
 		layers.append({i=i, name=tilemap.get_layer_name(i)})
 	return layers
 
-static func valid_neighbors(tilemap, cell, layer=0):
-	var nbr_coords = tilemap.get_surrounding_cells(cell)
-	return nbr_coords.filter(func(coord):
+static func valid_neighbors(tilemap: TileMap, cell: Vector2i, layer: int = 0) -> Array:
+	var nbr_coords := tilemap.get_surrounding_cells(cell)
+	return nbr_coords.filter(func(coord: Vector2i) -> bool:
 		return -1 != tilemap.get_cell_source_id(layer, coord))
 
 # Does not check if either cell is valid, only checks that they are neighboring coordinates
-static func is_neighbor(cell_a, cell_b):
+static func is_neighbor(cell_a: Vector2i, cell_b: Vector2i) -> bool:
 	if cell_a.x == cell_b.x:
 		if abs(cell_a.y - cell_b.y) == 1:
 			return true
 	if cell_a.y == cell_b.y:
 		if abs(cell_a.x - cell_b.x) == 1:
 			return true
+	return false
 
-static func group_has_neighbor(group, cell):
+static func group_has_neighbor(group: Array, cell: Vector2i) -> bool:
 	# gen neighbors for cell, check if any in group
-	for g_cell in group:
+	for g_cell: Vector2i in group:
 		if Reptile.is_neighbor(cell, g_cell):
 			return true
+	return false
 
-static func split_connected_groups(cell, groups):
-	var connected = []
-	var disconnected = []
+static func split_connected_groups(cell: Vector2i, groups: Array) -> Dictionary:
+	var connected := []
+	var disconnected := []
 	# should be able to filter out groups before checking every cell here, maybe with a stored min/max
-	for g in groups:
-		var is_neighbor = Reptile.group_has_neighbor(g, cell)
-		if is_neighbor:
+	for g: Array in groups:
+		var is_ngbr := Reptile.group_has_neighbor(g, cell)
+		if is_ngbr:
 			connected.append(g)
 		else:
 			disconnected.append(g)
 	return {connected=connected, disconnected=disconnected}
 
-static func update_connected_groups(cell, groups):
-	var split = Reptile.split_connected_groups(cell, groups)
-	var disconnected_groups = split.disconnected
-	var new_group = [cell]
-	for g in split.connected:
+static func update_connected_groups(cell: Vector2i, groups: Array) -> Array:
+	var split := Reptile.split_connected_groups(cell, groups)
+	var disconnected_groups: Array = split.disconnected
+	var new_group := [cell]
+	for g: Array in split.connected:
 		# combine connected groups
 		new_group.append_array(g)
 	disconnected_groups.append(new_group)
@@ -110,17 +114,17 @@ static func update_connected_groups(cell, groups):
 
 # Given a list of coords from get_used_cells, returns lists of coords
 # grouped by connectivity - i.e. the clusters of connected tiles.
-static func build_connected_groups(cells, groups=[]):
-	for c in cells:
+static func build_connected_groups(cells: Array, groups: Array = []) -> Array:
+	for c: Vector2i in cells:
 		groups = Reptile.update_connected_groups(c, groups)
 	return groups
 
 # Returns coords grouped by adjacency - connected cells will be in the same group.
-static func cell_clusters(tilemap):
-	var clusters = []
-	for l in Reptile.get_layers(tilemap):
-		var used_cells = tilemap.get_used_cells(l.i)
-		var connected_groups = Reptile.build_connected_groups(used_cells)
+static func cell_clusters(tilemap: TileMap) -> Array:
+	var clusters := []
+	for l: Dictionary in Reptile.get_layers(tilemap):
+		var used_cells: Array = tilemap.get_used_cells(l.i as int)
+		var connected_groups := Reptile.build_connected_groups(used_cells)
 		clusters.append_array(connected_groups)
 	return clusters
 
