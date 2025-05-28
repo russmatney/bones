@@ -108,6 +108,9 @@ static func free_children(node: Node) -> void:
 # not sure what difference this makes
 static func remove_children(node: Node, opts := {}) -> void:
 	for ch in node.get_children():
+		if opts.get("filter"):
+			if not opts.filter.call(ch):
+				continue
 		if opts.get("defer", false):
 			node.remove_child.call_deferred(ch)
 			ch.queue_free()
@@ -610,6 +613,21 @@ static func update_stylebox(node: Control, stylebox_name: String, fn: Callable) 
 	var stylebox := node.get_theme_stylebox(stylebox_name).duplicate() as StyleBox
 	fn.call(stylebox)
 	node.add_theme_stylebox_override(stylebox_name, stylebox)
+
+static func set_button_disabled(butt, disabled):
+	if disabled:
+		U.disable_button(butt)
+	else:
+		U.enable_button(butt)
+
+static func disable_button(butt):
+	butt.set_disabled(true)
+	butt.set_mouse_filter(Control.MOUSE_FILTER_IGNORE)
+	butt.set_focus_mode(Control.FOCUS_NONE)
+
+static func enable_button(butt):
+	butt.set_disabled(false)
+	butt.set_mouse_filter(Control.MOUSE_FILTER_STOP)
 
 
 static func add_color_rect(node: Node, opts: Dictionary) -> ColorRect:

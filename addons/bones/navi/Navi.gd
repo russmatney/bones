@@ -54,6 +54,7 @@ func find_focus(scene: Node = null) -> void:
 	else:
 		# there are things besides buttons to focus on...
 		var btns := scene.find_children("*", "BaseButton", true, false)
+		btns = btns.filter(func(b): return not b.is_disabled())
 		if len(btns) > 0:
 			for btn: Node in btns:
 				if btn is Control:
@@ -199,7 +200,7 @@ func show_menu(menu: Variant) -> void:
 	menus = menus.filter(func(m: Node) -> bool: return is_instance_valid(m))
 	if not menu in menus:
 		menu = add_menu(menu)
-		
+
 	if menu != null and menu is CanvasLayer:
 		var m: CanvasLayer = menu
 		m.show()

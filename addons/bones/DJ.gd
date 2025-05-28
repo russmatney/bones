@@ -17,7 +17,7 @@ func _ready() -> void:
 func play_sound_opts(sounds: Array, opts := {}) -> void:
 	var vary: float = opts.get("vary", 0.0)
 	var scale_range: float = opts.get("scale_range", 0)
-	var scale_note: float = opts.get("scale_note")
+	var scale_note: float = opts.get("scale_note", 0)
 
 	if sounds:
 		var i := randi() % sounds.size()
@@ -51,11 +51,11 @@ func setup_sound(sound: Variant, _opts := {}) -> AudioStream:
 
 func setup_sound_map(sound_map: Dictionary) -> Dictionary:
 	var playables := {}
-	for k: String in sound_map.keys():
+	for k: Variant in sound_map.keys():
 		playables[k] = []
 		if not sound_map[k] is Array:
 			sound_map[k] = [sound_map[k]]
-		for s: Array in sound_map[k]:
+		for s: Variant in sound_map[k]:
 			var sound := s
 			var opts := {}
 			if typeof(s) == TYPE_ARRAY:
@@ -67,7 +67,7 @@ func setup_sound_map(sound_map: Dictionary) -> Dictionary:
 				playables[k].append(playable)
 	return playables
 
-func play_sound(sound_map: Dictionary, nm: String, opts := {}) -> void:
+func play_sound(sound_map: Dictionary, nm: Variant, opts := {}) -> void:
 	if muted_sound:
 		# Log.warn("Cannot play sound, sounds are muted")
 		return
@@ -78,13 +78,19 @@ func play_sound(sound_map: Dictionary, nm: String, opts := {}) -> void:
 	else:
 		Log.warn("no sound for name", nm)
 
-func interrupt_sound(sound_map: Dictionary, nm: String) -> void:
+func interrupt_sound(sound_map: Dictionary, nm: Variant) -> Variant:
 	if nm in sound_map:
+		var to_return: AudioStream
 		for s: AudioStream in sound_map[nm]:
 			# stop any of these that are playing
 			SoundManager.stop_sound(s)
+			if to_return == null:
+				to_return = s
+		# return the first sound from the map
+		return to_return
 	else:
 		Log.warn("no sound for name", name)
+	return
 
 ## mute ######################################################################
 
