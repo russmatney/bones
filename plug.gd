@@ -7,3 +7,4 @@ func _plugging():
 	plug("viniciusgerevini/godot-aseprite-wizard", {include=["addons/AsepriteWizard"]})
 	plug("russmatney/log.gd", {include=["addons/log"]})
 	plug("SimonGigant/godot-text_effects_4.0")
+	# TODO move to this: plug("chairfull/GodotRichTextLabel2")
