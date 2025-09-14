@@ -10,7 +10,7 @@
     (def game-name "bones")
     (log "bb.edn running task"))
 
-  watch tasks/watch
+  ;; watch tasks/watch
 
   export       (tasks/export (some-> *command-line-args* first))
   export-debug (tasks/export (some-> *command-line-args* first) {:debug? true})
