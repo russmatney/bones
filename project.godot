@@ -42,3 +42,9 @@ enabled=PackedStringArray("res://addons/AsepriteWizard/plugin.cfg", "res://addon
 folder_colors={
 "res://addons/bones/": "orange"
 }
+[log_gd]
+
+config/color_resource_path="uid://dne5211vatnnj"
+config/log_level=0
+config/show_log_level_selector=true
+config/show_timestamps=true
