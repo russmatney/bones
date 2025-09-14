@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=4 uid="uid://c613c4pyfxtji"]
+
+[ext_resource type="Script" uid="uid://cjic1rjowknrg" path="res://src/cozy-gunner/player.gd" id="1_lcc7p"]
+[ext_resource type="Script" uid="uid://j8qml3gi0fe5" path="res://addons/bones/machine/Machine.gd" id="2_um5qi"]
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_xwcyv"]
+_data = PackedByteArray("AAADAAUAAAABAAAAIAAAACAAAADCAAAAUklGRroAAABXRUJQVlA4TK0AAAAvH8AHAB8gECBTZgy4IBBIEtp8SAIBylSxiPkPsM9mBbetrb3Jc/jlkujakyA59qQnV8ij/GMwQdyCEfImuDSv+H8kRojo/wTgn9vUsxyscT5SBiAfJBsAN0spAT4ZBmXA1mDbZ3DNzTq5yRnkNMsAQK6OAHCTLHKam6TgpuSmbmh7Z/+VnMOPiycXF5KCXKOrzxtgR1lagOxbpsjJN5liSe9/3s6YboMlmZLEbwA=")
+size_override = Vector2(32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kxdao"]
+atlas = SubResource("PortableCompressedTexture2D_xwcyv")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6lo0g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kxdao")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_db1oa"]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_lcc7p")
+
+[node name="Machine" type="Node" parent="."]
+script = ExtResource("2_um5qi")
+metadata/_custom_type_script = "uid://j8qml3gi0fe5"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_6lo0g")
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"embed_tex": true,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"should_round_fps": true,
+"slice": "",
+"source": "res://src/cozy-gunner/player.aseprite",
+"source_uid": 6751684712225046788
+}
+metadata/_aseprite_wizard_source_file_hash_ = "96cc7b4b895e16005253aa54b34f3bbb"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_db1oa")

@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://c3gti4ptronya"
+path="res://.godot/imported/player.aseprite-496ae0c3b8656483028275ad315f94b6.res"
+
+[deps]
+
+source_file="res://src/cozy-gunner/player.aseprite"
+dest_files=["res://.godot/imported/player.aseprite-496ae0c3b8656483028275ad315f94b6.res"]
+
+[params]
+

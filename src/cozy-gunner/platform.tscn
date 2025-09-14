@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=4 uid="uid://cktjx13nj8wdp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_phfyw"]
+size = Vector2(160, 32)
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_phfyw"]
+_data = PackedByteArray("AAADAAUAAAABAAAAoAAAACAAAAAkAQAAUklGRhwBAABXRUJQVlA4TA8BAAAvn8AHAC9AJEDSGcEFm9X/d1xDFmACNYuJxJNuPUTaNmyShq//ep7j+Y/fFeTGZGELbiRJcpQ55d/cC6CJ85G+9vX//7JithcmsCP678BtJEWKl/dg8RP4f8SV2HrnySqmjjRJp6snSR9X5tAgflzq0wwSU35/ftCopiUsauOjPmuGgkmLKlMGUD2oNmzKAaiB2kCkpCUY9EtUSGkAN6MXjEbVijk344djltbMvzzr7knqp8vw//K32d3XvD33Xt/L4yBVIEWLVlhZ28thlwrtGNgVrLY7QieyTg4ghvPtahCR47UIZ+og6EON4VMwSHD/mGbAOgCbRB+bFfHRwkEi8eSOiqqGEOyrxufKDG8AAA==")
+size_override = Vector2(160, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s8q2l"]
+atlas = SubResource("PortableCompressedTexture2D_phfyw")
+region = Rect2(0, 0, 160, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_djaws"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s8q2l")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Platform" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_phfyw")
+one_way_collision = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_djaws")
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"embed_tex": true,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"should_round_fps": true,
+"slice": "",
+"source": "res://src/cozy-gunner/platform.aseprite",
+"source_uid": 5095472992037183655
+}
+metadata/_aseprite_wizard_source_file_hash_ = "94427e11fab2db3bb04bb60b138e2dbb"

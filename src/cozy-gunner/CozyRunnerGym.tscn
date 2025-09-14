@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnbluqkhwejcl"]
+
+[ext_resource type="PackedScene" uid="uid://c613c4pyfxtji" path="res://src/cozy-gunner/player.tscn" id="1_db1oa"]
+[ext_resource type="PackedScene" uid="uid://cktjx13nj8wdp" path="res://src/cozy-gunner/platform.tscn" id="2_q2xkk"]
+
+[node name="CozyRunnerGym" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_db1oa")]
+position = Vector2(608, 320)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+
+[node name="Platform" parent="." instance=ExtResource("2_q2xkk")]
+position = Vector2(616, 424)
+
+[node name="Platform2" parent="." instance=ExtResource("2_q2xkk")]
+position = Vector2(480, 456)
+
+[node name="Platform3" parent="." instance=ExtResource("2_q2xkk")]
+position = Vector2(744, 392)
