@@ -1,7 +1,11 @@
-[gd_scene load_steps=7 format=4 uid="uid://c613c4pyfxtji"]
+[gd_scene load_steps=11 format=4 uid="uid://c613c4pyfxtji"]
 
-[ext_resource type="Script" uid="uid://cjic1rjowknrg" path="res://src/cozy-gunner/player.gd" id="1_lcc7p"]
+[ext_resource type="Script" uid="uid://cjic1rjowknrg" path="res://src/cozy-gunner/player/player.gd" id="1_lcc7p"]
 [ext_resource type="Script" uid="uid://j8qml3gi0fe5" path="res://addons/bones/machine/Machine.gd" id="2_um5qi"]
+[ext_resource type="Script" uid="uid://cqtk4e7c5i1nu" path="res://src/cozy-gunner/player/machine/idle.gd" id="3_wbhyw"]
+[ext_resource type="Script" uid="uid://c334fjcivi8j0" path="res://src/cozy-gunner/player/machine/run.gd" id="4_anviv"]
+[ext_resource type="Script" uid="uid://cbcen0i1hnkhr" path="res://src/cozy-gunner/player/machine/jump.gd" id="5_olg3j"]
+[ext_resource type="Script" uid="uid://d0gij1a2tesj7" path="res://src/cozy-gunner/player/machine/fall.gd" id="6_olg3j"]
 
 [sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_xwcyv"]
 _data = PackedByteArray("AAADAAUAAAABAAAAIAAAACAAAADCAAAAUklGRroAAABXRUJQVlA4TK0AAAAvH8AHAB8gECBTZgy4IBBIEtp8SAIBylSxiPkPsM9mBbetrb3Jc/jlkujakyA59qQnV8ij/GMwQdyCEfImuDSv+H8kRojo/wTgn9vUsxyscT5SBiAfJBsAN0spAT4ZBmXA1mDbZ3DNzTq5yRnkNMsAQK6OAHCTLHKam6TgpuSmbmh7Z/+VnMOPiycXF5KCXKOrzxtgR1lagOxbpsjJN5liSe9/3s6YboMlmZLEbwA=")
@@ -29,13 +33,32 @@ script = ExtResource("1_lcc7p")
 
 [node name="Machine" type="Node" parent="."]
 script = ExtResource("2_um5qi")
+initial_state = NodePath("Idle")
 metadata/_custom_type_script = "uid://j8qml3gi0fe5"
+
+[node name="Idle" type="Node" parent="Machine"]
+script = ExtResource("3_wbhyw")
+metadata/_custom_type_script = "uid://btloq8qv5353v"
+
+[node name="Run" type="Node" parent="Machine"]
+script = ExtResource("4_anviv")
+metadata/_custom_type_script = "uid://btloq8qv5353v"
+
+[node name="Jump" type="Node" parent="Machine"]
+script = ExtResource("5_olg3j")
+metadata/_custom_type_script = "uid://btloq8qv5353v"
+
+[node name="Fall" type="Node" parent="Machine"]
+script = ExtResource("6_olg3j")
+metadata/_custom_type_script = "uid://btloq8qv5353v"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_6lo0g")
 metadata/_aseprite_wizard_interface_config_ = {
-"pending_changes": {}
+"pending_changes": {
+"scale": "1.0"
+}
 }
 metadata/_aseprite_wizard_config_ = {
 "embed_tex": true,

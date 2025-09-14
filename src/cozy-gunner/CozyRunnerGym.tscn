@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cnbluqkhwejcl"]
 
-[ext_resource type="PackedScene" uid="uid://c613c4pyfxtji" path="res://src/cozy-gunner/player.tscn" id="1_db1oa"]
+[ext_resource type="PackedScene" uid="uid://c613c4pyfxtji" path="res://src/cozy-gunner/player/player.tscn" id="1_db1oa"]
 [ext_resource type="PackedScene" uid="uid://cktjx13nj8wdp" path="res://src/cozy-gunner/platform.tscn" id="2_q2xkk"]
 
 [node name="CozyRunnerGym" type="Node2D"]
